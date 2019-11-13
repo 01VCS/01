@@ -1,4 +1,5 @@
-rename "git" as "gitish", install itself as "git"
+rename "GITorrent" to "Gitty"
+on install: rename "git" as "gitish", install itself as "git"
 install git-unpack as lib, support its command
 ------------------------------
 compressed versioning:
