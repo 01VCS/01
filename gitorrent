@@ -1,0 +1,60 @@
+#!/bin/sh
+nm="GITorrent"
+vs="r1"
+gitorrentversion="""
+        \e[1;42m $nm \e[0m\e[100m version $vs \e[0m
+        \e[100m Created in 07-28-2019 (a day where my Internet has been attacked and neighboors injuried me) by Daniell Mesquita \e[0m
+"""
+
+if [ "$1" = "" ]; then
+   echo "$gitorrentversion"
+   echo "Type 'gitorrent --help' (without quotes) to see a list of available commands."
+fi
+
+# handle the already installed repos
+
+# gitorrent init/share > dat share (turn into gitorrent a existing git folder)
+if [ "$1" = "init" ] || [ "$1" = "share" ]; then
+   cd .git && dat share
+   # git remote add gitorrent gitorrent.git && cp -rf .git gitorrent.git && echo "gitorrent.git/" >> .gitignore && git add .gitignore && git commit -m "Add .gitignore for GITorrent" && 
+
+# git remote remove gitorrent
+# dont rely on git commit to 'cd gitorrent.git && dat share'
+
+#   if [ ! "$2" = "" ]; then
+#      dat share $2 && echo ".dat/" >> .gitignore
+#fi
+#   else
+#      dat share && echo ".dat/" >> .gitignore
+fi
+
+# gitorrent new/create > dat create (git clone and turns into gitorrent)
+
+
+# gitorrent clone > dat clone
+
+# gitorrent pull > dat pull
+
+# gitorrent push/sync > dat sync
+
+# displays help message with a list of commands:
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+   echo "        \e[1;42m $nm $vs \e[0m"
+   echo "Use these commands after/together with 'gitorrent' command."
+   echo "Available commands:"
+   echo "Information:"
+   echo "   --help, -h                  Shows all available commands"
+   echo "   --version, -v               Shows the version of $nm"
+   echo "   init, share                 Turns actual directory into a GITorrent git repository"
+fi
+
+if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
+   echo "$gitorrentversion"
+fi
+
+#todo:
+# detect when NodeJS and Dat aren't installed
+
+# support to remotes isn't need as GitDat is open and based upon Unwalled Garden
+# offline work is normally done with git
+# dat command is also supported as gitorrent works on top of it

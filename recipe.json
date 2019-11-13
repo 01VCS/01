@@ -1,0 +1,17 @@
+{
+	"florecipe-v": "1.0",
+	"name": "gitorrent",
+	"git": {
+		"source": {
+			"dat": "afa4d8690850ab801861addc2086476524ed697770b4a6f3a3aab4b1eb5165a6",
+			"github": "https://github.com/git/git.git"
+		}
+	},
+	"node": {},
+	"dat": {
+		"source": {
+			"dat": "07948ccf6c8393e04092c211f494096e0ba3feb8e0027670805b5d6886e64b45",
+			"github": "https://github.com/datproject/dat.git"
+		}
+	}
+}
