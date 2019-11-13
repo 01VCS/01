@@ -1,0 +1,17 @@
+rename "git" as "gitish", install itself as "git"
+install git-unpack as lib, support its command
+------------------------------
+compressed versioning:
+office: https://github.com/costerwi/rezip
+DB: http://web.archive.org/web/20191113223614/https://stackoverflow.com/questions/13608706/using-version-control-git-on-a-mysql-database
+------------------------------
+Diff:
+PDF: http://web.archive.org/web/20191113221744/https://tante.cc/2009/03/24/versioning-pdf-files-with-git/
+------------------------------
+Explorer integration (support Thunar actions and other fm context menus)
+------------------------------
+IPFS for hosting and data de-duplication
+------------------------------
+IPNS for blockchain-like append-only storage
+------------------------------
+support UDF sequential/packet disc writing
