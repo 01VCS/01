@@ -1,19 +1,19 @@
 #!/bin/sh
 
-echo "Installing GITorrent..."
-sudo cp -f gitorrent /usr/bin && sudo chmod +x /usr/bin/gitorrent
+echo "Installing Gitty..."
+sudo cp -f gitty /usr/bin && sudo chmod +x /usr/bin/gitty
 echo "Done."
 
 if [ ! -e /usr/lib/node_modules ]
    then
-      echo "\e[101m GITorrent uses Dat, which depends upon Node to work. Build and install NodeJS? [Y/n] \e[0m"
-      read insnod
-      case $insnod in
+      echo "\e[101m Gitty uses IPFS, which depends upon GoLang to work. Install Go? [Y/n] \e[0m"
+      read insgo
+      case $insgo in
          [nN])
-            echo "Cannot install GITorrent without its dependencies."
+            echo "Cannot install Gitty without its dependencies."
             exit;;
          [yY])
-            echo "Sorry, but actually we can't install NodeJS for you. Please search how to install NodeJS. After installed, reply on this same script to install Dat, and done"
+            echo "Sorry, but actually we can't install GoLang for you. Please search how to install Go. After installed, reply on this same script to install IPFS, and done"
             echo "\e[43m ;D \e[0m"
           # echo "Installing build dependencies..."
           # sudo apt-get install python g++ make # todo: detect different platforms, based on NodeJS build docs / also, do pre-compiled builds
@@ -29,11 +29,11 @@ fi
 
 # if [ ! -e /usr/lib/node_modules/dat ]
 #    then
-      echo "\e[101m GITorrent depends upon Dat (which depends on NodeJS) to work. Install Dat protocol? [Y/n] \e[0m"
-      read insdat
-      case $insdat in
+      echo "\e[101m Gitty depends upon IPFS (which depends on GoLang) to work. Install IPFS? [Y/n] \e[0m"
+      read insipfs
+      case $insipfs in
          [nN])
-            echo "Cannot install GITorrent without its dependencies."
+            echo "Cannot install Gitty without its dependencies."
             exit;;
          [yY])
             nodemodules="/usr/lib/node_modules"
@@ -46,7 +46,7 @@ fi
             cd $nodemodules/dat && sudo npm link && sudo npm install -g && sudo npm update -g
             cd $nodemodules
             sudo rm dat.tar.gz
-            echo "Done! Run 'gitorrent' command to use it." && exit
+            echo "Done! Run 'gitty' command to use it." && exit
             break ;;
          *)
             echo "Invalid answer." && exit

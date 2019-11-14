@@ -1,6 +1,11 @@
-rename "GITorrent" to "Gitty"
-on install: rename "git" as "gitish", install itself as "git"
+README.md
+* Rely primarily on gitless, install git as option
+* Can resume git clone/sync, like torrent (DHT instead of HTTP), without worries about network resets; also avoids MiTM attacks
+* Blockchain-like, with a P2P ledger of blobs/modifications (IPFS' IPNS)
+------------------------------
+on install: rename "git" as "gitish", install itself as "git", also having the "gitty" exec
 install git-unpack as lib, support its command
+node/dat as comments in recipe.json; add git binaries, add go/IPFS
 ------------------------------
 compressed versioning:
 office: https://github.com/costerwi/rezip
@@ -10,9 +15,14 @@ Diff:
 PDF: http://web.archive.org/web/20191113221744/https://tante.cc/2009/03/24/versioning-pdf-files-with-git/
 ------------------------------
 Explorer integration (support Thunar actions and other fm context menus)
+all linuxes: http://wiki.rabbitvcs.org/wiki/download
+XFCE: https://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin
+Windows: https://tortoisegit.org/download/
 ------------------------------
 IPFS for hosting and data de-duplication
 ------------------------------
 IPNS for blockchain-like append-only storage
+------------------------------
+support git LFS https://www.perforce.com/blog/vcs/how-git-lfs-works
 ------------------------------
 support UDF sequential/packet disc writing

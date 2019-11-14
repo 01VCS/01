@@ -1,21 +1,21 @@
 #!/bin/sh
-nm="GITorrent"
+nm="Gitty"
 vs="r1"
-gitorrentversion="""
+gittyversion="""
         \e[1;42m $nm \e[0m\e[100m version $vs \e[0m
-        \e[100m Created in 07-28-2019 (a day where my Internet has been attacked and neighboors injuried me) by Daniell Mesquita \e[0m
+        \e[100m Created in 07-28-2019 (a day where my Internet has been attacked and neighboors injuried me) as GITorrent and rebranded in 11-13-2019 (a day my Windows partition were corrupted) by Daniell Mesquita \e[0m
 """
 
 if [ "$1" = "" ]; then
-   echo "$gitorrentversion"
-   echo "Type 'gitorrent --help' (without quotes) to see a list of available commands."
+   echo "$gittyversion"
+   echo "Type 'gitty --help' (without quotes) to see a list of available commands."
 fi
 
 # handle the already installed repos
 
 # gitorrent init/share > dat share (turn into gitorrent a existing git folder)
 if [ "$1" = "init" ] || [ "$1" = "share" ]; then
-   cd .git && dat share
+   cd .git && # dat share
    # git remote add gitorrent gitorrent.git && cp -rf .git gitorrent.git && echo "gitorrent.git/" >> .gitignore && git add .gitignore && git commit -m "Add .gitignore for GITorrent" && 
 
 # git remote remove gitorrent
@@ -45,11 +45,11 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "Information:"
    echo "   --help, -h                  Shows all available commands"
    echo "   --version, -v               Shows the version of $nm"
-   echo "   init, share                 Turns actual directory into a GITorrent git repository"
+   echo "   init, share                 Turns actual directory into a $nm git repository"
 fi
 
 if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
-   echo "$gitorrentversion"
+   echo "$gittyversion"
 fi
 
 #todo:
