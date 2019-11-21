@@ -1,3 +1,13 @@
+Gitty also haves a repo. clone with
+
+support recursive flag
+
+updates
+
+gitorrent udf - bare git (or different git folders) in disc as remote
+
+git checkout -f HEAD
+
 README.md
 * Rely primarily on gitless, install git as option
 * Can resume git clone/sync, like torrent (DHT instead of HTTP), without worries about network resets; also avoids MiTM attacks
