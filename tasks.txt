@@ -1,3 +1,10 @@
+merge pijul (what a horrible name) VCS if it mets the following criteria:
+- lines haves objects, producing modular and unique files
+- can decompress the db into individual objects, like git unpack
+- objects are compatible with git, for unique files for use in IPFS
+- git projects can easily be ported to it
+then, rename gitty to 01, while also having backwards compatibility with git
+
 Gitty also haves a repo. clone with
 
 support recursive flag
