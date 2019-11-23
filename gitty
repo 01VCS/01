@@ -11,11 +11,20 @@ if [ "$1" = "" ]; then
    echo "Type 'gitty --help' (without quotes) to see a list of available commands."
 fi
 
+if [ "$1" = "ignore" ]; then
+   if [ -e ./$2 ]
+      then
+         echo "$2" >> .gitignore && echo "Successfully ignored '$2' file/folder, which means git will not anymore track it."
+      else
+         echo "[!] Failure on ignoring file/folder. '$2' isn't here. Please ensure you wrote the correct path/name."
+fi
+fi
+
 # handle the already installed repos
 
 # gitorrent init/share > dat share (turn into gitorrent a existing git folder)
-if [ "$1" = "init" ] || [ "$1" = "share" ]; then
-   cd .git && # dat share
+#if [ "$1" = "init" ] || [ "$1" = "share" ]; then
+#   cd .git && dat share
    # git remote add gitorrent gitorrent.git && cp -rf .git gitorrent.git && echo "gitorrent.git/" >> .gitignore && git add .gitignore && git commit -m "Add .gitignore for GITorrent" && 
 
 # git remote remove gitorrent
@@ -26,7 +35,7 @@ if [ "$1" = "init" ] || [ "$1" = "share" ]; then
 #fi
 #   else
 #      dat share && echo ".dat/" >> .gitignore
-fi
+# fi
 
 # gitorrent new/create > dat create (git clone and turns into gitorrent)
 
@@ -45,7 +54,8 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "Information:"
    echo "   --help, -h                  Shows all available commands"
    echo "   --version, -v               Shows the version of $nm"
-   echo "   init, share                 Turns actual directory into a $nm git repository"
+#   echo "   init, share                 Turns actual directory into a $nm git repository"
+   echo "   ignore                      Adds a file/folder to the .gitignore file, and git will not track it."
 fi
 
 if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
