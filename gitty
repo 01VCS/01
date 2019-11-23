@@ -49,18 +49,21 @@ fi
 # displays help message with a list of commands:
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "        \e[1;42m $nm $vs \e[0m"
-   echo "Use these commands after/together with 'gitorrent' command."
+   echo "Use these commands after/together with 'gitty' command."
    echo "Available commands:"
    echo "Information:"
    echo "   --help, -h                  Shows all available commands"
    echo "   --version, -v               Shows the version of $nm"
 #   echo "   init, share                 Turns actual directory into a $nm git repository"
    echo "   ignore <file/folder>        Adds a file/folder to the .gitignore file, and git will not track it."
-   . /usr/bin/gitish
+   echo "------------------------------"
+   echo "Specific to the classic git:"
+   /usr/bin/gitish
 fi
 
 if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
-   echo "$vs"
+   echo "gitty $vs"
+   /usr/bin/gitish --version
 fi
 
 #todo:
