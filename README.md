@@ -2,6 +2,10 @@
 
 The git 2.0, a evolution to make git future-proof. Solved the majority of git's problems.
 
+Awesome commands:
+
+- git ignore <file>
+
 # Installing
 
 Open terminal on Gitty folder, and type following by pressing `[ENTER]`:
