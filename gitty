@@ -65,7 +65,7 @@ if [ "$1" = "status" ] || [ "$1" = "know" ]; then
    /usr/bin/gitish status
 fi
 
-if [ "$1" = "add" ] || [ "$1" = "list" ]; then
+if [ "$1" = "add" ]; then
    /usr/bin/gitish add $2
 fi
 
@@ -81,6 +81,10 @@ fi
 if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
    echo "gitty $vs"
    /usr/bin/gitish --version
+fi
+
+if [ "$1" = "log" ] || [ "$1" = "list" ]; then
+   /usr/bin/gitish log
 fi
 
 #todo:
