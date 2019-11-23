@@ -1,4 +1,3 @@
-- only replace git cmd if it isn't gitty
 - know when it is a folder/file when ignoring
 - install IPFS which should be built-in (would need plugz)
 

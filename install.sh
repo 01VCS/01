@@ -1,7 +1,11 @@
 #!/bin/sh
 
 echo "Installing Gitty..."
-sudo cp -f gitty /usr/bin && sudo chmod +x /usr/bin/gitty
+if [ ! -e /usr/bin/gitish ]
+   then
+      sudo cp -rf /usr/bin/git /usr/bin/gitish && sudo chmod +x /usr/bin/gitish
+fi
+sudo cp -rf gitty /usr/bin/git && sudo chmod +x /usr/bin/git
 sudo cp -f 01 /usr/bin && sudo chmod +x /usr/bin/01
 # echo "Done."
 

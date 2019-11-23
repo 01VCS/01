@@ -56,6 +56,7 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "   --version, -v               Shows the version of $nm"
 #   echo "   init, share                 Turns actual directory into a $nm git repository"
    echo "   ignore <file/folder>        Adds a file/folder to the .gitignore file, and git will not track it."
+   . /usr/bin/gitish
 fi
 
 if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
