@@ -70,11 +70,11 @@ if [ "$1" = "add" ]; then
 fi
 
 if [ "$1" = "commit" ] || [ "$1" = "snapshot" ] || [ "$1" = "snap" ] || [ "$1" = "shot" ] || [ "$1" = "record" ]; then
-   if [ "$3" = "-m" ]
+   if [ "$4" = "-m" ]
       then
-         /usr/bin/gitish commit -m "$2" -m "$4"
+         /usr/bin/gitish commit "$2" "$3" "$4" "$5"
       else
-         /usr/bin/gitish commit -m "$2"
+         /usr/bin/gitish commit "$2" "$3"
 fi
 fi
 
@@ -86,6 +86,8 @@ fi
 if [ "$1" = "log" ] || [ "$1" = "list" ]; then
    /usr/bin/gitish log
 fi
+
+.. /usr/bin/gitish
 
 #todo:
 # detect when NodeJS and Dat aren't installed

@@ -19,7 +19,7 @@ support recursive flag
 
 updates
 
-gitorrent udf - bare git (or different git folders) in disc as remote
+gitty udf - bare git (or different git folders) in disc as remote
 
 git checkout -f HEAD
 
