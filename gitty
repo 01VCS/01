@@ -61,6 +61,18 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    /usr/bin/gitish
 fi
 
+if [ "$1" = "status" ] || [ "$1" = "know" ]; then
+   /usr/bin/gitish status
+fi
+
+if [ "$1" = "add" ] || [ "$1" = "list" ]; then
+   /usr/bin/gitish add $2
+fi
+
+if [ "$1" = "commit" ] || [ "$1" = "snapshot" ] || [ "$1" = "snap" ] || [ "$1" = "shot" ] || [ "$1" = "record" ]; then
+   /usr/bin/gitish commit $2 $3 $4 $5 $6
+fi
+
 if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
    echo "gitty $vs"
    /usr/bin/gitish --version
