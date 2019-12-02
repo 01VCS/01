@@ -20,6 +20,11 @@ if [ "$1" = "ignore" ]; then
 fi
 fi
 
+if [ "$1" = "size" ]; then
+   echo "Showing size of this git repository:"
+   du -sh .git
+fi
+
 # handle the already installed repos
 
 # gitorrent init/share > dat share (turn into gitorrent a existing git folder)
@@ -56,6 +61,7 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "   --version, -v               Shows the version of $nm"
 #   echo "   init, share                 Turns actual directory into a $nm git repository"
    echo "   ignore <file/folder>        Adds a file/folder to the .gitignore file, and git will not track it."
+   echo "   size                        Shows size of git repository"
    echo "------------------------------"
    echo "Specific to the classic git:"
    /usr/bin/gitish
@@ -87,7 +93,7 @@ if [ "$1" = "log" ] || [ "$1" = "list" ]; then
    /usr/bin/gitish log
 fi
 
-.. /usr/bin/gitish
+# .. /usr/bin/gitish
 
 #todo:
 # detect when NodeJS and Dat aren't installed
