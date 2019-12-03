@@ -6,11 +6,9 @@
 - install IPFS which should be built-in (would need plugz)
 
 merge pijul (what a horrible name) VCS if it mets the following criteria:
-- lines haves objects, producing modular and unique files
 - can decompress the db into individual objects, like git unpack
 - objects are compatible with git, for unique files for use in IPFS
-- git projects can easily be ported to it, and else
-- a project can have the same repo both in git and pijul, and make them in sync
+- git projects can easily be ported to it, and else. a project can have the same repo both in git and pijul, and make them in sync
 then, rename gitty to 01, while also having backwards compatibility with git
 
 Gitty also haves a repo. clone with
