@@ -1,3 +1,5 @@
+- store files' dates
+
 - keep using sh instead of bash
 - import git
 - preference for gitty
