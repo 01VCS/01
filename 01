@@ -22,14 +22,12 @@ fi
 
 if [ "$1" = "size" ]; then
    echo "Showing size of this git repository:"
-   
+   if [ "$2" = "--quiet" || "$2" = "-q" ]
+      then
+         du -sh .git
+      else
+         du -sh .git | tr -d '	' | sed 's/.git//g'
 fi
-
-if [ "$2" = "--quiet" || "$2" = "-q" ]
-   then
-      du -sh .git
-   else
-      du -sh .git | tr -d '	' | sed 's/.git//g'
 fi
 
 # handle the already installed repos
