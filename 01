@@ -22,7 +22,14 @@ fi
 
 if [ "$1" = "size" ]; then
    echo "Showing size of this git repository:"
-   du -sh .git
+   
+fi
+
+if [ "$2" = "--quiet" || "$2" = "-q" ]
+   then
+      du -sh .git
+   else
+      du -sh .git | tr -d '	' | sed 's/.git//g'
 fi
 
 # handle the already installed repos
@@ -61,7 +68,7 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "   --version, -v               Shows the version of $nm"
 #   echo "   init, share                 Turns actual directory into a $nm git repository"
    echo "   ignore <file/folder>        Adds a file/folder to the .gitignore file, and git will not track it."
-   echo "   size                        Shows size of git repository"
+   echo "   size                        Shows size of git repository. '-q' for quiet simpler output"
    echo "------------------------------"
    #echo "Specific to the classic git:"
    #/usr/bin/gitish
