@@ -1,11 +1,11 @@
 #!/bin/sh
 
-echo "Installing Gitty..."
-if [ ! -e /usr/bin/gitish ]
-   then
-      sudo cp -rf /usr/bin/git /usr/bin/gitish && sudo chmod +x /usr/bin/gitish
-fi
-sudo cp -rf gitty /usr/bin/git && sudo chmod +x /usr/bin/git
+echo "Installing 01..."
+#if [ ! -e /usr/bin/gitish ]
+#   then
+#      sudo cp -rf /usr/bin/git /usr/bin/gitish && sudo chmod +x /usr/bin/gitish
+#fi
+#sudo cp -rf gitty /usr/bin/git && sudo chmod +x /usr/bin/git
 sudo cp -f 01 /usr/bin && sudo chmod +x /usr/bin/01
 # echo "Done."
 
@@ -28,7 +28,7 @@ sudo cp -f 01 /usr/bin && sudo chmod +x /usr/bin/01
 #            cd $nodemodules/dat && sudo npm link && sudo npm install -g && sudo npm update -g
 #            cd $nodemodules
 #            sudo rm dat.tar.gz
-            echo "Done! Run 'gitty' command to use it." && exit
+            echo "Done! Run '01' command to use it." && exit
 #            break ;;
 #         *)
 #            echo "Invalid answer." && exit
