@@ -22,11 +22,11 @@ fi
 
 if [ "$1" = "size" ]; then
    echo "Showing size of this git repository:"
-   if [ "$2" = "--quiet" || "$2" = "-q" ]
+   if [ "$2" = "--quiet" ] || [ "$2" = "-q" ]
       then
-         du -sh .git
-      else
          du -sh .git | tr -d '	' | sed 's/.git//g'
+      else
+         du -sh .git
 fi
 fi
 
