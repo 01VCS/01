@@ -1,11 +1,25 @@
-- store files' dates
+01 init kick
+x="init"
+export x
+git $x
+git add .
+git commit -m "$x"
+
+- store files' dates (soon)
+
+01 blm
+git checkout -b main master && git branch -D master
+-
+guide on next steps with site-specific tutorials for Github and Gitlab
+git push --set-upstream origin main
+
+- install IPFS which should be built-in (would need Plugz)
 
 - keep using sh instead of bash
 - import git
 - preference for gitty
 
 - know when it is a folder/file when ignoring
-- install IPFS which should be built-in (would need plugz)
 
 merge pijul (what a horrible name) VCS if it mets the following criteria:
 - can decompress the db into individual objects, like git unpack
