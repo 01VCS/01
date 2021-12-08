@@ -1,3 +1,13 @@
+Option to overlap/wrap git (git is renamed gitish and our own git wraps it)
+
+git unstage
+git restore --staged
+
+❯ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+    git push --set-upstream origin main
+
 01 init kick
 x="init"
 export x
