@@ -1,0 +1,8 @@
+chown -h 1000:1000 './git'
+chmod 0777 './git'
+/usr/bin/touch -hcmd "2021-12-06 16:11:59.4340778730 -0300" './git'
+/usr/bin/touch -hcad "2021-12-08 19:06:36.3153833640 -0300" './git'
+chown -h 1000:1000 './tasks.txt'
+chmod 0666 './tasks.txt'
+/usr/bin/touch -hcmd "2021-12-03 02:30:41.8617456860 -0300" './tasks.txt'
+/usr/bin/touch -hcad "2021-12-03 02:30:41.8617456860 -0300" './tasks.txt'

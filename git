@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#cd /usr/lib/floflis/browser/firedoge
+#./firefox
+
+/usr/bin/./git $@
+if [[ "$1" = "ass" ]];then
+echo "Did you mean't \"git add\"? If that's not what you meant, it may be the time to take a break of git and... ...you know what the site to search for it."
+fi
+
+#if [ "$3" != "file:///usr/lib/floflis/browser/firedoge/defaults/firstpage/creatingprofile.html" ] || [ "$1" != "--flofirstuse" ];then
+#if /usr/lib/floflis/browser/firedoge/./powers.sh; then /usr/lib/floflis/browser/firedoge/./firefox $@; else exit 1; fi
+#else
+#   /usr/lib/floflis/browser/firedoge/./firefox $@
+#fi
