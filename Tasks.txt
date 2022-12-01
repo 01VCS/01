@@ -1,12 +1,25 @@
-Option to overlap/wrap git (git is renamed gitish and our own git wraps it)
+Option to overlap/wrap git (git is renamed git-original and our own git wraps it)
+
+use rust-git (gix) whenever possible
+install pijul and git-lfs
 
 git unstage
 git restore --staged
+01 remove and unstash alias ("git rm --cached <file>...")
 
 ❯ git push
 fatal: The current branch main has no upstream branch.
 To push the current branch and set the remote as upstream, use
     git push --set-upstream origin main
+    
+❯ 01 ignore *.png
+[!] Failure on ignoring file/folder. '*.png' isn't here. Please ensure you wrote the correct path/name.
+fix with:
+if ls *.png 1> /dev/null 2>&1; then
+
+❯ 01 ignore Floflis\ ISO/Floflis\ ppl/
+/usr/bin/01: 17: [: ./Floflis: unexpected operator
+[!] Failure on ignoring file/folder. 'Floflis ISO/Floflis ppl/' isn't here. Please ensure you wrote the correct path/name.
 
 01 init kick
 x="init"
