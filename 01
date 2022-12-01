@@ -12,21 +12,22 @@ if [ "$1" = "" ]; then
 fi
 
 if [ "$1" = "ignore" ]; then
-   if [ "$2" != "" ]
+   if [ "$2" != "" ] # verify if '01 ignore' cmd isn't empty -->
       then
-         if [ -e ./$2 ]
+         if [ -e ./$2 ] # verify if the file/folder exists -->
             then
-               if [ "$2" != "$(git check-ignore $2)" ]
+               if [ "$2" != "$(git check-ignore $2)" ] # verify if the file/folder isn't already ignored -->
                   then
+                     # It passes three checks before working: verify if '01 ignore' cmd isn't empty, if the file/folder exists and if the file/folder isn't already ignored
                      echo "$2" >> .gitignore && echo "Successfully ignored '$2' file/folder, which means git will not anymore track it."
-                  else
+                  else # <-- verify if the file/folder isn't already ignored
                      echo "[i] '$2' is already ignored, so it won't appear when you are adding files to be commited."
                      echo "Or, do you want to un-ignore? Will be implemented soon! Until then, you can enable displaying hidden files on your file explorer, then edit the .gitignore file to remove the file or folder you want to un-ignore!"
 fi
-            else
+            else # <-- verify if the file/folder exists
                echo "[!] Failure on ignoring file/folder. '$2' isn't here. Please ensure you wrote the correct path/name."
 fi
-      else
+      else # <-- verify if '01 ignore' cmd isn't empty
          echo "[i] '01 ignore' requires you to write a file or folder path/name for it to find and do what you want."
          echo "In this format: '01 ignore <place-here-the-path-name>'"
 fi
