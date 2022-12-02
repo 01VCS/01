@@ -1,5 +1,7 @@
 Option to overlap/wrap git (git is renamed git-original and our own git wraps it)
 
+wrap "gix tools help"
+
 use rust-git (gix) whenever possible
 install pijul and git-lfs
 
