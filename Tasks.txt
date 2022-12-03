@@ -1,5 +1,8 @@
 Option to overlap/wrap git (git is renamed git-original and our own git wraps it)
 
+git config --global init.defaultBranch main
+git wrapper: on every git init: git branch -m main
+
 wrap "gix tools help"
 
 use rust-git (gix) whenever possible
