@@ -5,6 +5,8 @@ git wrapper: on every git init: git branch -m main
 
 wrap "gix tools help"
 
+option to add all symlinks recursively (check if file with same flag -- exist then add it too)
+
 use rust-git (gix) whenever possible
 install pijul and git-lfs
 
