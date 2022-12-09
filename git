@@ -59,8 +59,8 @@ fi
 # displays help message with a list of commands:
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "       git wrapper - \e[1;42m $nm $vs \e[0m"
-   echo "Information:"
-   echo "   --help, -h                  Shows all available commands"
+#   echo "Information:"
+#   echo "   --help, -h                  Shows all available commands"
    echo "Manage repo:"
    echo "   add -r <file/extension>     Add files/extensions recursively! Only one file per once."
    echo "   unstage                     Tell what files you want to unstage/not to include in the next commit."

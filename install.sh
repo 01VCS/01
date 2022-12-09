@@ -22,6 +22,32 @@ case $wrapgit in
       echo "${invalid}" ;;
 esac
 
+echo "Are you using Nushell or any similar shells that don't support numbers as commands? [Y/n]"
+read missingnoshell
+case $missingnoshell in
+   [nN])
+      echo "Ok."
+      break ;;
+   [yY])
+      echo "- Installing z1 command in /usr/bin..."
+      sudo cat > /usr/bin/z1 << ENDOFFILE
+#!/bin/sh
+
+. /usr/bin/./01
+ENDOFFILE
+      echo "- Turning z1 into an executable..."
+      $maysudo chmod 755 /usr/bin/z1 && $maysudo chmod +x /usr/bin/z1
+      break ;;
+   *)
+      echo "${invalid}" ;;
+esac
+   if [ -f /usr/bin/z1 ]
+   then
+      zerone="z1"
+   else
+      zerone="01"
+fi
+
 # if [ ! -e /usr/lib/node_modules/dat ]
 #    then
 #      echo "\e[101m Gitty depends upon IPFS to work. Install IPFS? [Y/n] \e[0m"
@@ -41,7 +67,7 @@ esac
 #            cd $nodemodules/dat && sudo npm link && sudo npm install -g && sudo npm update -g
 #            cd $nodemodules
 #            sudo rm dat.tar.gz
-            echo "Done! Run '01' command to use it." && exit
+            echo "Done! Run '$zerone' command to use it." && exit
 #            break ;;
 #         *)
 #            echo "Invalid answer." && exit

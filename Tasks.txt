@@ -2,8 +2,6 @@ update git wrapper if its found
 
 --help about git wrapper cmds
 
-"z1" wrapper for 01 (for nushell and similar shells)
-
 ❯ git push
 fatal: The current branch main has no upstream branch.
 To push the current branch and set the remote as upstream, use
