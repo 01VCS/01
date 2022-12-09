@@ -43,6 +43,14 @@ if [ "$1" = "size" ]; then
 fi
 fi
 
+if [ "$1" = "blm" ]; then
+   echo "✊🏿 Black Lives Matter: switch from master to main branch"
+   git checkout -b main master && git branch -D master
+   #git push --set-upstream origin main
+   echo "Done! Now 'git push' then go to your online repository to make 'main' the default and delete the 'master' branch."
+#guide on next steps with site-specific tutorials for Github and Gitlab - get link from remote. also do git push automatically based on current remote
+fi
+
 # handle the already installed repos
 
 # gitorrent init/share > dat share (turn into gitorrent a existing git folder)

@@ -1,3 +1,7 @@
+update git wrapper if its found
+
+--help about git wrapper cmds
+
 ❯ git push
 fatal: The current branch main has no upstream branch.
 To push the current branch and set the remote as upstream, use
@@ -5,11 +9,6 @@ To push the current branch and set the remote as upstream, use
 -
 https://stackoverflow.com/questions/46021955/get-first-line-of-a-shell-commands-output#comment131923724_46022082
 /media/daniell/B/git/01VCS/gitty/01/testgitpush
-    
-01 blm
-git checkout -b main master && git branch -D master && git push --set-upstream origin main
--
-guide on next steps with site-specific tutorials for Github and Gitlab
 
 
 
