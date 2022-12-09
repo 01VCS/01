@@ -3,35 +3,40 @@
 #cd /usr/lib/floflis/browser/firedoge
 #./firefox
 
+# Only run normal git at commands unknown to 01's git wrapper
 if [[ "$2" != "-r" ]];then
 if [[ "$1" != "ass" ]];then
 if [[ "$1" != "init" ]];then
 if [[ "$1" != "unstage" ]];then
-/usr/bin/./git "$@"
+/usr/bin/./gitoriginal "$@"
 fi
 fi
 fi
 fi
 
+# Use gix instead of git for initialize; thankfully gix always respect the "main" branch
+if [[ "$1" = "init" ]];then
+gix init
+gitoriginal config --global init.defaultBranch main
+#git wrapper: on every git init: git branch -m main
+fi
+
+# add files/extensions recursively!
 if [[ "$1" = "add" ]];then
 if [[ "$2" = "-r" ]];then
-git ls-files -co --exclude-standard | grep '\'"$3"'$' | xargs git add
+gitoriginal ls-files -co --exclude-standard | grep '\'"$3"'$' | xargs gitoriginal add
 #https://stackoverflow.com/questions/2855140/recursively-add-files-by-pattern#comment2909387_2857909
 fi
 fi
 
+# git need intuitive commands when users like me finds themselves in trouble, such as accidentaly adding files they shouldn't
+if [[ "$1" = "unstage" ]];then
+gitoriginal rm --cached "$@"
+fi
+
+# traps for misspells
 if [[ "$1" = "ass" ]];then
 echo "Did you mean \"git add\"? If that's not what you mean, it may be the time to take a break of git..."
-fi
-
-if [[ "$1" = "init" ]];then
-gix init
-git config --global init.defaultBranch main
-#git wrapper: on every git init: git branch -m main
-fi
-
-if [[ "$1" = "unstage" ]];then
-git rm --cached "$@"
 fi
 
 #if [ "$3" != "file:///usr/lib/floflis/browser/firedoge/defaults/firstpage/creatingprofile.html" ] || [ "$1" != "--flofirstuse" ];then

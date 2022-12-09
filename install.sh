@@ -1,13 +1,26 @@
 #!/bin/sh
 
 echo "Installing 01..."
-#if [ ! -e /usr/bin/gitish ]
-#   then
-#      sudo cp -rf /usr/bin/git /usr/bin/gitish && sudo chmod +x /usr/bin/gitish
-#fi
-#sudo cp -rf gitty /usr/bin/git && sudo chmod +x /usr/bin/git
 sudo cp -f 01 /usr/bin && sudo chmod +x /usr/bin/01
-# echo "Done."
+
+echo "Do you want to install our git replacement? 🧚‍♀️ [Y/n]"
+read wrapgit
+case $wrapgit in
+   [nN])
+      echo "Ok."
+      break ;;
+   [yY])
+      if [ ! -f /usr/bin/gitoriginal ]; then sudo cp -rf /usr/bin/git /usr/bin/gitoriginal && sudo chmod +x /usr/bin/gitoriginal; fi
+#sudo cp -rf gitoriginal /usr/bin/git && sudo chmod +x /usr/bin/git
+      echo "Done."
+      echo "- Installing git wrapper in /usr/bin..."
+      sudo cp -f git /usr/bin
+      echo "- Turning git wrapper into an executable..."
+      $maysudo chmod 755 /usr/bin/git && $maysudo chmod +x /usr/bin/git
+      break ;;
+   *)
+      echo "${invalid}" ;;
+esac
 
 # if [ ! -e /usr/lib/node_modules/dat ]
 #    then

@@ -1,28 +1,45 @@
+❯ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+    git push --set-upstream origin main
+-
+https://stackoverflow.com/questions/46021955/get-first-line-of-a-shell-commands-output#comment131923724_46022082
+/media/daniell/B/git/01VCS/gitty/01/testgitpush
+    
+01 blm
+git checkout -b main master && git branch -D master && git push --set-upstream origin main
+-
+guide on next steps with site-specific tutorials for Github and Gitlab
+
+
+
 wrap "gix tools help"
+SUBCOMMANDS:
+    estimate-hours
+            Estimate hours worked based on a commit history [aliases: h]
+    find
+            Find all repositories in a given directory
+    help
+            Print this message or the help of the given subcommand(s)
+    organize
+            Move all repositories found in a directory into a structure matching their clone URLs
 
 option to add all symlinks recursively (check if file with same flag -- exist then add it too)
-
-
-
-Option to overlap/wrap git (git is renamed git-original and our own git wraps it)
+https://gist.github.com/martinboy/04bfef054d4b0abd75a920b680d1e710
+https://gist.github.com/danimesq/ce610fa4d497239ec15db81593028188
 
 use rust-git (gix) whenever possible
-install pijul and git-lfs
+install git, git-lfs and pijul (and a Rust companion for gix)
 
+------------------------------
 compressed versioning:
 office/compressed: https://github.com/costerwi/rezip, https://github.com/callegar/Rezip
 DB: http://web.archive.org/web/20191113223614/https://stackoverflow.com/questions/13608706/using-version-control-git-on-a-mysql-database
 ------------------------------
 Diff:
-PDF: http://web.archive.org/web/20191113221744/https://tante.cc/2009/03/24/versioning-pdf-files-with-git/
+PDF: http://web.archive.org/web/20191113221744/https://tante.cc/2009/03/24/versioning-pdf-files-with-git/, https://www.google.com/search?q=linux+extract+PDF+images&client=firefox-b-d&sxsrf=ALiCzsa1LUOd-wdZo_7NrpGZ2caAhDPjqQ%3A1670618819665&ei=w56TY7-GKKLY1sQPn5-3gAI&ved=0ahUKEwj_87OKtO37AhUirJUCHZ_PDSAQ4dUDCA8&uact=5&oq=linux+extract+PDF+images&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCAAQgAQQDTIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIFCAAQhgMyBQgAEIYDMgUIABCGAzoKCAAQRxDWBBCwAzoHCAAQsAMQQzoHCCMQJxCRAjoGCAAQBxAeOgQIABAeOgcIIxCwAhAnOggIABAIEAcQHkoECEEYAEoECEYYAFDUCFi4FGDlFmgBcAF4AIABwwGIAegKkgEDMC44mAEAoAEByAEKwAEB&sclient=gws-wiz-serp
+------------------------------
 
-
-
-❯ git push
-fatal: The current branch main has no upstream branch.
-To push the current branch and set the remote as upstream, use
-    git push --set-upstream origin main
-    
 ❯ 01 ignore *.png
 [!] Failure on ignoring file/folder. '*.png' isn't here. Please ensure you wrote the correct path/name.
 fix with:
@@ -31,6 +48,8 @@ if ls *.png 1> /dev/null 2>&1; then
 ❯ 01 ignore Floflis\ ISO/Floflis\ ppl/
 /usr/bin/01: 17: [: ./Floflis: unexpected operator
 [!] Failure on ignoring file/folder. 'Floflis ISO/Floflis ppl/' isn't here. Please ensure you wrote the correct path/name.
+
+- know when it is a folder/file when ignoring
 
 01 init kick
 x="init"
@@ -41,21 +60,13 @@ git commit -m "$x"
 
 - store files' dates (soon)
 
-01 blm
-git checkout -b main master && git branch -D master
--
-guide on next steps with site-specific tutorials for Github and Gitlab
-git push --set-upstream origin main
-
 - install IPFS which should be built-in (would need Plugz)
 
 - keep using sh instead of bash
 - import git
 - preference for gitty
 
-- know when it is a folder/file when ignoring
-
-merge pijul (what a horrible name) VCS if it mets the following criteria:
+merge pijul VCS if it mets the following criteria:
 - can decompress the db into individual objects, like git unpack
 - objects are compatible with git, for unique files for use in IPFS
 - git projects can easily be ported to it, and else. a project can have the same repo both in git and pijul, and make them in sync
