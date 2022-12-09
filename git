@@ -5,19 +5,27 @@
 
 if [[ "$2" != "-r" ]];then
 if [[ "$1" != "ass" ]];then
+if [[ "$1" != "init" ]];then
 /usr/bin/./git "$@"
+fi
 fi
 fi
 
 if [[ "$1" = "add" ]];then
 if [[ "$2" = "-r" ]];then
 git ls-files -co --exclude-standard | grep '\'"$3"'$' | xargs git add
-#echo "Ignore the previous message from git"
+#https://stackoverflow.com/questions/2855140/recursively-add-files-by-pattern#comment2909387_2857909
 fi
 fi
 
 if [[ "$1" = "ass" ]];then
 echo "Did you mean \"git add\"? If that's not what you mean, it may be the time to take a break of git..."
+fi
+
+if [[ "$1" = "init" ]];then
+gix init
+git config --global init.defaultBranch main
+#git wrapper: on every git init: git branch -m main
 fi
 
 #if [ "$3" != "file:///usr/lib/floflis/browser/firedoge/defaults/firstpage/creatingprofile.html" ] || [ "$1" != "--flofirstuse" ];then
