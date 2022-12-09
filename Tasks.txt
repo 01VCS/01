@@ -1,7 +1,3 @@
-git unstage
-git restore --staged
-01 remove and unstash alias ("git rm --cached <file>...")
-
 wrap "gix tools help"
 
 option to add all symlinks recursively (check if file with same flag -- exist then add it too)

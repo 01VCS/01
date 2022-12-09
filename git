@@ -6,7 +6,9 @@
 if [[ "$2" != "-r" ]];then
 if [[ "$1" != "ass" ]];then
 if [[ "$1" != "init" ]];then
+if [[ "$1" != "unstage" ]];then
 /usr/bin/./git "$@"
+fi
 fi
 fi
 fi
@@ -26,6 +28,10 @@ if [[ "$1" = "init" ]];then
 gix init
 git config --global init.defaultBranch main
 #git wrapper: on every git init: git branch -m main
+fi
+
+if [[ "$1" = "unstage" ]];then
+git rm --cached "$@"
 fi
 
 #if [ "$3" != "file:///usr/lib/floflis/browser/firedoge/defaults/firstpage/creatingprofile.html" ] || [ "$1" != "--flofirstuse" ];then
