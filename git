@@ -4,10 +4,10 @@
 #./firefox
 
 # Only run normal git at commands unknown to 01's git wrapper
-if [[ "$2" != "-r" ]];then
-if [[ "$1" != "ass" ]];then
 if [[ "$1" != "init" ]];then
+if [[ "$2" != "-r" ]];then
 if [[ "$1" != "unstage" ]];then
+if [[ "$1" != "ass" ]];then
 /usr/bin/./gitoriginal "$@"
 fi
 fi
@@ -24,8 +24,13 @@ fi
 # add files/extensions recursively!
 if [[ "$1" = "add" ]];then
 if [[ "$2" = "-r" ]];then
-gitoriginal ls-files -co --exclude-standard | grep '\'"$3"'$' | xargs gitoriginal add
+if [[ "$3" != "" ]]
+then
+   gitoriginal ls-files -co --exclude-standard | grep '\'"$3"'$' | xargs gitoriginal add
 #https://stackoverflow.com/questions/2855140/recursively-add-files-by-pattern#comment2909387_2857909
+else
+   echo "Please tell what filename or extension (without \"*\") you want to add. Only one file per once."
+fi
 fi
 fi
 
