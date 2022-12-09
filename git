@@ -3,9 +3,21 @@
 #cd /usr/lib/floflis/browser/firedoge
 #./firefox
 
+if [[ "$2" != "-r" ]];then
+if [[ "$1" != "ass" ]];then
 /usr/bin/./git $@
+fi
+fi
+
+if [[ "$1" = "add" ]];then
+if [[ "$2" = "-r" ]];then
+git ls-files -co --exclude-standard | grep '\'"$3"'$' | xargs git add
+#echo "Ignore the previous message from git"
+fi
+fi
+
 if [[ "$1" = "ass" ]];then
-echo "Did you mean't \"git add\"? If that's not what you meant, it may be the time to take a break of git and... ...you know what the site to search for it."
+echo "Did you mean \"git add\"? If that's not what you mean, it may be the time to take a break of git..."
 fi
 
 #if [ "$3" != "file:///usr/lib/floflis/browser/firedoge/defaults/firstpage/creatingprofile.html" ] || [ "$1" != "--flofirstuse" ];then
