@@ -49,6 +49,7 @@ if [ "$1" = "blm" ]; then
    #git push --set-upstream origin main
    echo "Done! Now 'git push' then go to your online repository to make 'main' the default and delete the 'master' branch."
 #guide on next steps with site-specific tutorials for Github and Gitlab - get link from remote. also do git push automatically based on current remote
+#link tweet about this
 fi
 
 # handle the already installed repos
@@ -85,9 +86,11 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "Information:"
    echo "   --help, -h                  Shows all available commands"
    echo "   --version, -v               Shows the version of $nm"
-#   echo "   init, share                 Turns actual directory into a $nm git repository"
-   echo "   ignore <file/folder>        Adds a file/folder to the .gitignore file, and git will not track it."
    echo "   size                        Shows size of git repository. '-q' for quiet simpler output"
+#   echo "   init, share                 Turns actual directory into a $nm git repository"
+   echo "Manage repo:"
+   echo "   ignore <file/folder>        Adds a file/folder to the .gitignore file, and git will not track it."
+   echo "   blm                         Migrate from 'master' to 'main' branch in a repo ✊🏿"
    echo "------------------------------"
    #echo "Specific to the classic git:"
    #/usr/bin/gitish

@@ -1,4 +1,11 @@
 #!/bin/bash
+nm="01"
+vs="r1"
+vcsversion="""
+        \e[1;42m $nm \e[0m\e[100m version $vs \e[0m
+        \e[100m Created in 07-28-2019 (a day where my Internet has been attacked and neighboors injuried me) as GITorrent and rebranded as Gitty in 11-13-2019 (a day my Windows partition were corrupted) and reworked as '01' in 11-09-2021 by Daniella Mesquita \e[0m
+"""
+#should get from config file in common with 01
 
 #cd /usr/lib/floflis/browser/firedoge
 #./firefox
@@ -47,6 +54,17 @@ fi
 # traps for misspells
 if [[ "$1" = "ass" ]];then
 echo "Did you mean \"git add\"? If that's not what you mean, it may be the time to take a break of git..."
+fi
+
+# displays help message with a list of commands:
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+   echo "       git wrapper - \e[1;42m $nm $vs \e[0m"
+   echo "Information:"
+   echo "   --help, -h                  Shows all available commands"
+   echo "Manage repo:"
+   echo "   add -r <file/extension>     Add files/extensions recursively! Only one file per once."
+   echo "   unstage                     Tell what files you want to unstage/not to include in the next commit."
+   echo "------------------------------"
 fi
 
 #if [ "$3" != "file:///usr/lib/floflis/browser/firedoge/defaults/firstpage/creatingprofile.html" ] || [ "$1" != "--flofirstuse" ];then
