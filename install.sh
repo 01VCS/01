@@ -1,8 +1,15 @@
 #!/bin/sh
 
-echo "Installing 01..."
-sudo cp -f 01 /usr/bin && sudo chmod +x /usr/bin/01
+echo "Installing 01..." && echo "- Installing 01 command in /usr/bin..."
+sudo cp -f 01 /usr/bin
+echo "- Turning 01 into an executable..."
+sudo chmod +x /usr/bin/01
 
+if [ -f /usr/bin/gitoriginal ]; then
+sudo cp -f git /usr/bin
+fi
+#programming tip from an inspired aspirant newbie: if you expect a condition to happen/be used more frequently than others, put it on front/prioritize it!
+if [ ! -f /usr/bin/gitoriginal ]; then
 echo "Do you want to install our git replacement? 🧚‍♀️ [Y/n]"
 read wrapgit
 case $wrapgit in
@@ -10,8 +17,7 @@ case $wrapgit in
       echo "Ok."
       break ;;
    [yY])
-      if [ ! -f /usr/bin/gitoriginal ]; then sudo cp -rf /usr/bin/git /usr/bin/gitoriginal && sudo chmod +x /usr/bin/gitoriginal; fi
-#sudo cp -rf gitoriginal /usr/bin/git && sudo chmod +x /usr/bin/git
+      sudo cp -rf /usr/bin/git /usr/bin/gitoriginal && sudo chmod +x /usr/bin/gitoriginal
       echo "Done."
       echo "- Installing git wrapper in /usr/bin..."
       sudo cp -f git /usr/bin
@@ -21,6 +27,7 @@ case $wrapgit in
    *)
       echo "${invalid}" ;;
 esac
+fi
 
 echo "Are you using Nushell or any similar shells that don't support numbers as commands? [Y/n]"
 read missingnoshell
