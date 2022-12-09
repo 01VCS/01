@@ -31,7 +31,12 @@ fi
 
 # git need intuitive commands when users like me finds themselves in trouble, such as accidentaly adding files they shouldn't
 if [[ "$1" = "unstage" ]];then
-gitoriginal rm --cached "$@"
+if [[ "$2" != "" ]]
+then
+   gitoriginal rm --cached "$@"
+else
+   echo "Please tell what files you want to unstage/not to include in the next commit."
+fi
 fi
 
 # traps for misspells
