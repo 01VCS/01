@@ -1,18 +1,26 @@
-Option to overlap/wrap git (git is renamed git-original and our own git wraps it)
-
-git config --global init.defaultBranch main
-git wrapper: on every git init: git branch -m main
+git unstage
+git restore --staged
+01 remove and unstash alias ("git rm --cached <file>...")
 
 wrap "gix tools help"
 
 option to add all symlinks recursively (check if file with same flag -- exist then add it too)
 
+
+
+Option to overlap/wrap git (git is renamed git-original and our own git wraps it)
+
 use rust-git (gix) whenever possible
 install pijul and git-lfs
 
-git unstage
-git restore --staged
-01 remove and unstash alias ("git rm --cached <file>...")
+compressed versioning:
+office/compressed: https://github.com/costerwi/rezip, https://github.com/callegar/Rezip
+DB: http://web.archive.org/web/20191113223614/https://stackoverflow.com/questions/13608706/using-version-control-git-on-a-mysql-database
+------------------------------
+Diff:
+PDF: http://web.archive.org/web/20191113221744/https://tante.cc/2009/03/24/versioning-pdf-files-with-git/
+
+
 
 ❯ git push
 fatal: The current branch main has no upstream branch.
@@ -75,13 +83,6 @@ README.md
 on install: rename "git" as "gitish", install itself as "git", also having the "gitty" exec
 install git-unpack as lib, support its command
 node/dat as comments in recipe.json; add git binaries, add go/IPFS
-------------------------------
-compressed versioning:
-office: https://github.com/costerwi/rezip
-DB: http://web.archive.org/web/20191113223614/https://stackoverflow.com/questions/13608706/using-version-control-git-on-a-mysql-database
-------------------------------
-Diff:
-PDF: http://web.archive.org/web/20191113221744/https://tante.cc/2009/03/24/versioning-pdf-files-with-git/
 ------------------------------
 Explorer integration (support Thunar actions and other fm context menus)
 all linuxes: http://wiki.rabbitvcs.org/wiki/download
