@@ -35,6 +35,8 @@ Diff:
 PDF: http://web.archive.org/web/20191113221744/https://tante.cc/2009/03/24/versioning-pdf-files-with-git/, https://www.google.com/search?q=linux+extract+PDF+images&client=firefox-b-d&sxsrf=ALiCzsa1LUOd-wdZo_7NrpGZ2caAhDPjqQ%3A1670618819665&ei=w56TY7-GKKLY1sQPn5-3gAI&ved=0ahUKEwj_87OKtO37AhUirJUCHZ_PDSAQ4dUDCA8&uact=5&oq=linux+extract+PDF+images&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCAAQgAQQDTIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIFCAAQhgMyBQgAEIYDMgUIABCGAzoKCAAQRxDWBBCwAzoHCAAQsAMQQzoHCCMQJxCRAjoGCAAQBxAeOgQIABAeOgcIIxCwAhAnOggIABAIEAcQHkoECEEYAEoECEYYAFDUCFi4FGDlFmgBcAF4AIABwwGIAegKkgEDMC44mAEAoAEByAEKwAEB&sclient=gws-wiz-serp
 ------------------------------
 
+continue git's "command not found but similar commands" with 01 git wrapper's own
+
 ❯ 01 ignore *.png
 [!] Failure on ignoring file/folder. '*.png' isn't here. Please ensure you wrote the correct path/name.
 fix with:
