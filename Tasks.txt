@@ -56,6 +56,13 @@ Thumbs.db
 *.pptx@git/
 *.pptx
 
+❯ https://github.com/Web3HQ/ipfscrape.git
+error: Command not found
+  ┌─ shell:1:1
+  │
+1 │ https://github.com/Web3HQ/ipfscrape.git
+  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ command https://github.com/Web3HQ/ipfscrape.git not found
+
 01 init kick
 x="init"
 export x
