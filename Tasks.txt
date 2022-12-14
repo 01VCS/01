@@ -48,6 +48,14 @@ if ls *.png 1> /dev/null 2>&1; then
 
 - know when it is a folder/file when ignoring
 
+01 will tell missing items at .gitignore
+node_modules
+*.log
+**/.DS_Store
+Thumbs.db
+*.pptx@git/
+*.pptx
+
 01 init kick
 x="init"
 export x
