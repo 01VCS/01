@@ -41,7 +41,7 @@ install git, git-lfs and pijul (and a Rust companion for gix)
 
 ------------------------------
 compressed versioning:
-office/compressed: https://github.com/costerwi/rezip, https://github.com/callegar/Rezip
+office/compressed: https://github.com/costerwi/rezip, https://github.com/callegar/Rezip (.docx, .pptx, .capx*, .zip, .tar*)
 DB: http://web.archive.org/web/20191113223614/https://stackoverflow.com/questions/13608706/using-version-control-git-on-a-mysql-database
 ------------------------------
 Diff:
