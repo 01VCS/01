@@ -5,6 +5,17 @@ To push the current branch and set the remote as upstream, use
 -
 https://stackoverflow.com/questions/46021955/get-first-line-of-a-shell-commands-output#comment131923724_46022082
 /media/daniell/B/git/01VCS/gitty/01/testgitpush
+testgitpush on  main 
+❯ git push 2>&1 | head -n 2 | tail -n 1
+To push the current branch and set the remote as upstream, use
+-
+testgitpush on  main 
+❯ git push 2>&1 | sed -n 2p
+To push the current branch and set the remote as upstream, use
+-
+https://stackoverflow.com/questions/46021955/get-first-line-of-a-shell-commands-output/46022082?noredirect=1#comment131924208_46022082
+-
+"do you want to run the command suggested by git?" then run "git push 2>&1 | sed -n 4p" while removing spaces, and ask user if want to always choose this and that it can be changed later
 
 
 
