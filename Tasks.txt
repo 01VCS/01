@@ -1,3 +1,21 @@
+README.md: remove "Gitty" reference and teach to clone repo just as its true for mlq.
+
+--------------------------
+❯ z1
+
+         01  version r1 
+         Created in 07-28-2019 (a day where my Internet has been attacked and neighboors injuried me) as GITorrent and rebranded as Gitty in 11-13-2019 (a day my Windows partition were corrupted) and reworked as '01' in 11-09-2021 by Daniella Mesquita 
+
+Type '01 --help' (without quotes) to see a list of available commands.
+
+~ 
+❯ z1 --help
+         01 r1 
+Use these commands after/together with '01' command.
+-------------------
+detect if z1 is installed, then replace '01' to 'z1'
+--------------------------
+
 git init: add git-meta
 
 ❯ git push
