@@ -10,15 +10,15 @@ Its also slowly replacing git's perl functions into Rust!
 
 Awesome commands:
 
-- '01 size' (Shows size of git repository. '-q' for quiet simpler output)
-- '01/git ignore <file/folder>' (Adds a file/folder to the .gitignore file, and git will not track it.)
-- '01 blm' (Migrate from 'master' to 'main' branch in a repo ✊🏿)
+- `01/z1/git ignore <file/folder>` (Adds a file/folder to the .gitignore file, and git will not track it.)
+- `01/z1 blm` (Migrate from 'master' to 'main' branch in a repo ✊🏿)
+- `01/z1 size` (Shows size of git repository. '-q' for quiet simpler output)
 
 Awesome commands for our git wrapper:
 
-- 'git init' (with 01, now it uses Rust)
-- 'git add -r <file/extension>' (Add files/extensions recursively! Only one file per once.)
-- 'git unstage' (Tell what files you want to unstage/not to include in the next commit.)
+- `git add -r <file/extension>` (Add files/extensions recursively! Only one file per once.)
+- `git unstage` (Tell what files you want to unstage/not to include in the next commit.)
+- `git init` (with 01, now it uses Rust)
 
 # Installing
 
@@ -28,7 +28,11 @@ Open terminal on Gitty folder, and type following by pressing `[ENTER]`:
 chmod +x install.sh && sh ./install.sh
 ```
 
-<img alt="01 logo/icon" title="01 logo/icon" src="logo-icon.svg">
+Important note: some newer shells other than [Bash](https://github.com/mitnk/cicada), such as [Nushell](https://github.com/nushell/nushell/), don't support numbers as commands (such as "01"). For these cases, our installer asks to aditionally install the "z1" alternate/shortcut command 🧚‍♀️🪄
+
+<img width="250px" alt="01 logo/icon" title="01 logo/icon" src="logo-icon.svg">
+
+Layer2 for git, ready for the Web 3.0
 
 01 is already a minimum viable product; but PRs and issues are welcome!
 
