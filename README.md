@@ -30,6 +30,8 @@ chmod +x install.sh && sh ./install.sh
 
 Important note: some newer shells other than [Bash](https://github.com/mitnk/cicada), such as [Nushell](https://github.com/nushell/nushell/), don't support numbers as commands (such as "01"). For these cases, our installer asks to aditionally install the "z1" alternate/shortcut command 🧚‍♀️🪄
 
+Another important note: 01 does not superpower your existing installed git by default; instead, our installer asks if it is the desire of the user. If confirmed, the installer renames git and install its own git wrapper that still uses the old git.
+
 <img width="250px" alt="01 logo/icon" title="01 logo/icon" src="logo-icon.svg">
 
 Layer2 for git, ready for the Web 3.0
