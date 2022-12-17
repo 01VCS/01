@@ -1,0 +1,42 @@
+This folder: /media/daniell/B/git/01VCS
+
+  File: ./folderstamp_nonrecursive.sh
+  Size: 584       	Blocks: 2          IO Block: 4096   regular file
+Device: 844h/2116d	Inode: 1100655     Links: 1
+Access: (0777/-rwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2022-12-17 18:47:33.018404500 -0300
+Modify: 2022-12-17 18:01:45.523121000 -0300
+Change: 2022-12-17 18:23:16.969637100 -0300
+ Birth: -
+IPFS hash: QmWqmoFk1vfRwEQtPHUofPayefPAA7gH1qRaaWYYdqzZSu
+------------------------------
+  File: ./git-meta
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 844h/2116d	Inode: 3508824     Links: 1
+Access: (0777/drwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2022-12-16 17:24:47.952056900 -0300
+Modify: 2022-12-07 22:48:36.715793700 -0300
+Change: 2022-12-07 22:48:36.715793700 -0300
+ Birth: -
+IPFS hash: 
+------------------------------
+  File: ./git-scripts
+  Size: 28672     	Blocks: 56         IO Block: 4096   directory
+Device: 844h/2116d	Inode: 3510338     Links: 1
+Access: (0777/drwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2022-12-16 17:24:48.498967400 -0300
+Modify: 2021-10-18 21:19:51.475764300 -0300
+Change: 2021-10-18 21:19:52.667478500 -0300
+ Birth: -
+IPFS hash: 
+------------------------------
+  File: ./gitty
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 844h/2116d	Inode: 1462402     Links: 1
+Access: (0777/drwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2022-12-17 18:22:55.154325300 -0300
+Modify: 2022-12-17 18:22:48.008720400 -0300
+Change: 2022-12-17 18:22:48.008720400 -0300
+ Birth: -
+IPFS hash: 
+------------------------------

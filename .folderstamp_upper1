@@ -1,0 +1,72 @@
+This folder: /media/daniell/B/git/01VCS/gitty
+
+  File: ./01
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 844h/2116d	Inode: 1462658     Links: 1
+Access: (0777/drwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2022-12-17 18:22:32.850208300 -0300
+Modify: 2022-12-17 18:22:32.846383000 -0300
+Change: 2022-12-17 18:22:32.846383000 -0300
+ Birth: -
+IPFS hash: 
+------------------------------
+  File: ./folderstamp_nonrecursive.sh
+  Size: 584       	Blocks: 2          IO Block: 4096   regular file
+Device: 844h/2116d	Inode: 1100567     Links: 1
+Access: (0777/-rwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2022-12-17 18:23:16.966078800 -0300
+Modify: 2022-12-17 18:01:45.523121000 -0300
+Change: 2022-12-17 18:22:48.013598600 -0300
+ Birth: -
+IPFS hash: QmWqmoFk1vfRwEQtPHUofPayefPAA7gH1qRaaWYYdqzZSu
+------------------------------
+  File: ./Git-2.23.0-32-bit.exe
+  Size: 608839    	Blocks: 1192       IO Block: 4096   regular file
+Device: 844h/2116d	Inode: 1462410     Links: 1
+Access: (0777/-rwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2021-12-21 19:48:36.274343500 -0300
+Modify: 2020-01-24 07:24:02.000000000 -0300
+Change: 2021-12-09 01:45:32.331901900 -0300
+ Birth: -
+IPFS hash: QmX3ELyKjj2ujZWzJXWnRxJd7FPoEzHSNA7zA74SPL6vk7
+------------------------------
+  File: ./Git-2.23.0-64-bit.exe
+  Size: 47701816  	Blocks: 93168      IO Block: 4096   regular file
+Device: 844h/2116d	Inode: 1462411     Links: 1
+Access: (0777/-rwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2021-12-21 19:48:36.690153200 -0300
+Modify: 2020-01-24 07:24:10.000000000 -0300
+Change: 2021-12-09 01:45:33.006724600 -0300
+ Birth: -
+IPFS hash: QmahXDcXvwDH3YmbtHLRsvstKnbpzw43Uq91iD8CCHwhtu
+------------------------------
+  File: ./Git, Even More Distributed – IPFS Documentation_files
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 844h/2116d	Inode: 1462417     Links: 1
+Access: (0777/drwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2022-12-16 17:24:50.233457400 -0300
+Modify: 2020-12-10 21:33:19.672483000 -0300
+Change: 2021-12-09 01:45:33.192682000 -0300
+ Birth: -
+IPFS hash: 
+------------------------------
+  File: ./Git, Even More Distributed – IPFS Documentation.html
+  Size: 83305     	Blocks: 168        IO Block: 4096   regular file
+Device: 844h/2116d	Inode: 1462409     Links: 1
+Access: (0777/-rwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2022-02-09 12:21:30.259411800 -0300
+Modify: 2020-01-24 07:26:48.000000000 -0300
+Change: 2021-12-09 01:45:32.304278800 -0300
+ Birth: -
+IPFS hash: QmYJHRzNse3hvpnCFWTw6R47enxeJKGXPfpUhptCHJpuoJ
+------------------------------
+  File: ./How to add site to IPFS and IPNS - Coinmonks - Medium.pdf
+  Size: 194165    	Blocks: 384        IO Block: 4096   regular file
+Device: 844h/2116d	Inode: 1462413     Links: 1
+Access: (0777/-rwxrwxrwx)  Uid: ( 1000/ daniell)   Gid: ( 1000/ daniell)
+Access: 2022-02-09 12:21:30.476175000 -0300
+Modify: 2020-01-24 07:26:48.000000000 -0300
+Change: 2021-12-09 01:45:33.053765600 -0300
+ Birth: -
+IPFS hash: QmbcZJPZevCzBAL3hqawThgRuyXTjQjuad2njbqPbvrisv
+------------------------------
