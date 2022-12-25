@@ -15,7 +15,9 @@ if [[ "$1" != "init" ]];then
 if [[ "$2" != "-r" ]];then
 if [[ "$1" != "unstage" ]];then
 if [[ "$1" != "ass" ]];then
+if [[ "$1" != "vommit" ]];then
 /usr/bin/./gitoriginal "$@"
+fi
 fi
 fi
 fi
@@ -54,6 +56,9 @@ fi
 # traps for misspells
 if [[ "$1" = "ass" ]];then
 echo "Did you mean \"git add\"? If that's not what you mean, it may be the time to take a break of git..."
+fi
+if [[ "$1" = "vommit" ]];then
+echo "Did you mean \"git commit\"? If that's not what you mean 🤢 it may be the time to take a break of git..."
 fi
 
 # displays help message with a list of commands:
