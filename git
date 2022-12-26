@@ -26,7 +26,7 @@ fi
 # Use gix instead of git for initialize; thankfully gix always respect the "main" branch
 if [[ "$1" = "init" ]];then
 gix init
-echo "Initialized empty Git repository in $pwd/.git/ (using 01 VCS+git wrapper+gix)"
+echo "Initialized empty Git repository in $(pwd)/.git/ (using 01 VCS+git wrapper+gix)"
 gitoriginal config --global init.defaultBranch main
 #git wrapper: on every git init: git branch -m main
 fi
