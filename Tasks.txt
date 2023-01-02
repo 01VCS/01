@@ -146,3 +146,5 @@ IPNS for blockchain-like append-only storage
 support git LFS https://www.perforce.com/blog/vcs/how-git-lfs-works
 ------------------------------
 support UDF sequential/packet disc writing
+
+git wrapper supported cmd: "git add *.ln" (to add all symlinks)
