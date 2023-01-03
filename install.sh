@@ -1,5 +1,7 @@
 #!/bin/sh
 
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
 echo "Installing 01..." && echo "- Installing 01 command in /usr/bin..."
 sudo cp -f 01 /usr/bin
 echo "- Turning 01 into an executable..."
@@ -54,6 +56,15 @@ esac
    else
       zerone="01"
 fi
+
+echo "Downloading git-meta..."
+mkdir tmp && mkdir tmp/git-meta
+cd tmp/git-meta
+git clone --no-checkout https://github.com/01VCS/git-meta.git .
+git checkout -f
+chmod +x install.sh && sh ./install.sh
+cd "$SCRIPTPATH"
+rm tmp
 
 # if [ ! -e /usr/lib/node_modules/dat ]
 #    then
