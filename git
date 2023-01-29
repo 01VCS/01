@@ -30,7 +30,7 @@ echo "Initialized empty Git repository in $(pwd)/.git/ (using 01 VCS+git wrapper
 gitoriginal config --global init.defaultBranch main
 #git wrapper: on every git init: git branch -m main
 echo "Initializing git-meta for this brand new repository..."
-bash /usr/lib/git-meta/init.sh
+bash /usr/lib/01/git-meta/init.sh
 fi
 
 # add files/extensions recursively!
