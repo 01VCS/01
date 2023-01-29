@@ -57,14 +57,29 @@ esac
       zerone="01"
 fi
 
-echo "Downloading git-meta..."
-mkdir tmp && mkdir tmp/git-meta
-cd tmp/git-meta
-git clone --no-checkout https://github.com/01VCS/git-meta.git .
+echo "Installing 01 suite's apps..."
+
+echo "Installing ipfvcs..."
+cd include/ipfvcs
+if [ ! -e .git ]; then git clone --no-checkout https://github.com/01VCS/ipfvcs.git .; fi
+if [ -e .git ]; then git pull; fi
+git checkout -f
+chmod +x install.sh && sh ./install.sh
+#rm -f install.sh #use noah to exclude everything except .git
+#rm -f nu-script-handler
+#rm -f Tasks.txt
+#rm -f .gitattributes
+#rm -f .gitmeta
+#rm -rf rsc
+cd "$SCRIPTPATH"
+
+echo "Installing git-meta..."
+cd include/git-meta
+if [ ! -e .git ]; then git clone --no-checkout https://github.com/01VCS/git-meta.git .; fi
+if [ -e .git ]; then git pull; fi
 git checkout -f
 chmod +x install.sh && sh ./install.sh
 cd "$SCRIPTPATH"
-rm tmp
 
 # if [ ! -e /usr/lib/node_modules/dat ]
 #    then
