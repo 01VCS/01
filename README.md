@@ -32,7 +32,7 @@ Important note: some newer shells other than [Bash](https://github.com/mitnk/cic
 
 Another important note: 01 does not superpower your existing installed git by default; instead, our installer asks if it is the desire of the user. If confirmed, the installer renames git and install its own git wrapper that still uses the old git.
 
-<img width="250px" alt="01 logo/icon" title="01 logo/icon" src="logo-icon.svg">
+<img width="250px" alt="01 logo/icon" title="01 logo/icon" src="icon.svg">
 
 Layer2 for git, ready for the Web 3.0
 
