@@ -135,6 +135,10 @@ chmod +x install.sh && sh ./install.sh
 #rm -rf rsc
 cd "$SCRIPTPATH"
 
+echo "Installing app icon for 01..."
+cp icon.svg /usr/share/icons/hicolor/scalable/apps/
+sudo gtk-update-icon-cache /usr/share/icons/gnome/ -f
+
 # if [ ! -e /usr/lib/node_modules/dat ]
 #    then
 #      echo "\e[101m Gitty depends upon IPFS to work. Install IPFS? [Y/n] \e[0m"
