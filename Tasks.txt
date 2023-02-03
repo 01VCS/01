@@ -1,5 +1,9 @@
 README.md: remove "Gitty" reference and teach to clone repo just as its true for mlq.
 
+tell in README.md and --help that you can use gitoriginal as fallback
+study how git perform gpg commit signing then do implementation for eth signing
+insp on git-lfs as a way to build the git-archived extension
+
 --------------------------
 ❯ z1
 
