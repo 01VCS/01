@@ -4,6 +4,9 @@ rocketlaunch_dir=`pwd` #from https://unix.stackexchange.com/a/52919/470623
 
 if [ ! -e /usr/lib/01 ]; then sudo mkdir /usr/lib/01; fi
 
+echo "Installing git..."
+sudo apt-get install git -y
+
 echo "Installing 01..." && echo "- Installing 01 command in /usr/bin..."
 sudo cp -f 01 /usr/bin
 echo "- Turning 01 into an executable..."
