@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+rocketlaunch_dir=`pwd` #from https://unix.stackexchange.com/a/52919/470623
 
 if [ ! -e /usr/lib/01 ]; then sudo mkdir /usr/lib/01; fi
 
@@ -67,7 +67,7 @@ if [ ! -e .git ]; then git clone --no-checkout https://github.com/01VCS/git-meta
 if [ -e .git ]; then git pull; fi
 git checkout -f
 chmod +x install.sh && sh ./install.sh
-cd "$SCRIPTPATH"
+cd "$rocketlaunch_dir"
 
 # Install git-LFS:
  echo "git-LFS is a need for supporting large file storage in git. Only install it if you're a developer in need of it."
@@ -133,7 +133,7 @@ chmod +x install.sh && sh ./install.sh
 #rm -f .gitattributes
 #rm -f .gitmeta
 #rm -rf rsc
-cd "$SCRIPTPATH"
+cd "$rocketlaunch_dir"
 
 echo "Installing app icon for 01..."
 cp icon.svg /usr/share/icons/hicolor/scalable/apps/
