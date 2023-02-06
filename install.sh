@@ -139,7 +139,9 @@ chmod +x install.sh && sh ./install.sh
 cd "$rocketlaunch_dir"
 
 echo "Installing app icon for 01..."
-cp icon.svg /usr/share/icons/hicolor/scalable/apps/
+cp -f icon.svg /usr/share/icons/hicolor/scalable/apps/01.svg
+ln -s 01.svg /usr/share/icons/hicolor/scalable/apps/z1.svg
+ln -s 01.svg /usr/share/icons/hicolor/scalable/apps/01vcs.svg
 sudo gtk-update-icon-cache /usr/share/icons/gnome/ -f
 
 # if [ ! -e /usr/lib/node_modules/dat ]
