@@ -73,14 +73,14 @@ chmod +x install.sh && sh ./install.sh
 cd "$rocketlaunch_dir"
 
 # Install git-LFS:
- echo "git-LFS is a need for supporting large file storage in git. Only install it if you're a developer in need of it."
- echo "Do you want to install git-LFS? [Y/n]"
- read insgitlfs
- case $insgitlfs in
-    [nN])
-       echo "${ok}"
-       break ;;
-    [yY])
+# echo "git-LFS is a need for supporting large file storage in git. Only install it if you're a developer in need of it."
+# echo "Do you want to install git-LFS? [Y/n]"
+# read insgitlfs
+# case $insgitlfs in
+#    [nN])
+#       echo "${ok}"
+#       break ;;
+#    [yY])
        echo "Installing git-LFS..."
              if [ "$flofarch" = "386" ]; then
 #          $maysudo gdebi include/git-LFS/git-lfs_2.9.2_i386.deb
@@ -94,10 +94,10 @@ cd "$rocketlaunch_dir"
           echo "Testing if git-LFS works:"
           git lfs
  fi
-       break ;;
-    *)
-       echo "${invalid}" ;;
- esac
+#       break ;;
+#    *)
+#       echo "${invalid}" ;;
+# esac
 #task: detect if have to use gdebi or dpkg; or always use dpkg
 
 echo "Installing Pijul VCS (you did great, elder git)..."
