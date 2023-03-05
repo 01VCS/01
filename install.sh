@@ -2,6 +2,18 @@
 
 rocketlaunch_dir=`pwd` #from https://unix.stackexchange.com/a/52919/470623
 
+unameOutM="$(uname -m)"
+case "${unameOutM}" in
+    i286)   flofarch="286";;
+    i586)   flofarch="586";;
+    i386)   flofarch="386";;
+    i686)   flofarch="386";;
+    x86_64) flofarch="amd64";;
+    arm)    dpkg --print-flofarch | grep -q "arm64" && flofarch="arm64" || flofarch="arm";;
+    riscv64) flofarch="riscv64"
+esac
+#echo ${flofarch}
+
 if [ ! -e /usr/lib/01 ]; then sudo mkdir /usr/lib/01; fi
 
 echo "Installing git..."
@@ -115,7 +127,7 @@ fi
 if [ "$flofarch" = "amd64" ]; then
    cd include
    echo "Installing gix (you did great, elder perl git)..."
-   tar -xzf include/gix-max-v0.10.0-x86_64-unknown-linux-musl.tar.gz
+   tar -xzf gix-max-v0.10.0-x86_64-unknown-linux-musl.tar.gz
    $maysudo mv -f gix-max-v0.10.0-x86_64-unknown-linux-musl/gix  /usr/bin/gix
    $maysudo chmod +x /usr/bin/gix
    $maysudo mv -f gix-max-v0.10.0-x86_64-unknown-linux-musl/gixp  /usr/bin/gixp
