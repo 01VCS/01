@@ -142,8 +142,8 @@ cd "$rocketlaunch_dir"
 
 echo "Installing app icon for 01..."
 cp -f icon.svg /usr/share/icons/hicolor/scalable/apps/01.svg
-ln -s 01.svg /usr/share/icons/hicolor/scalable/apps/z1.svg
-ln -s 01.svg /usr/share/icons/hicolor/scalable/apps/01vcs.svg
+ln -sf 01.svg /usr/share/icons/hicolor/scalable/apps/z1.svg
+ln -sf 01.svg /usr/share/icons/hicolor/scalable/apps/01vcs.svg
 sudo gtk-update-icon-cache /usr/share/icons/gnome/ -f
 
 # if [ ! -e /usr/lib/node_modules/dat ]
