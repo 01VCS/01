@@ -113,6 +113,7 @@ if [ "$flofarch" = "amd64" ]; then
 fi
 
 if [ "$flofarch" = "amd64" ]; then
+   cd include
    echo "Installing gix (you did great, elder perl git)..."
    tar -xzf include/gix-max-v0.10.0-x86_64-unknown-linux-musl.tar.gz
    $maysudo mv -f gix-max-v0.10.0-x86_64-unknown-linux-musl/gix  /usr/bin/gix
@@ -122,6 +123,7 @@ if [ "$flofarch" = "amd64" ]; then
    rm -rf gix-max-v0.10.0-x86_64-unknown-linux-musl
    echo "Testing if gix works:"
    gix
+   cd "$rocketlaunch_dir"
 fi
 
 echo "Installing ipfvcs..."
